@@ -1,255 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Action Game Color Theme System</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            bg: '#0B0B0D',
-                            card: '#131316',
-                            primary: '#FF6A00',
-                            primaryHover: '#FF7E1A',
-                            secondary: '#FFC400',
-                            textMain: '#FFFFFF',
-                            textSec: '#C9C9C9',
-                            border: 'rgba(255,255,255,0.06)',
-                            glass: 'rgba(255,255,255,0.03)',
-                        }
-                    },
-                    boxShadow: {
-                        'orange-glow': '0 0 30px rgba(255,106,0,0.5)',
-                        'card-depth': '0 0 30px rgba(255,106,0,0.2)',
-                    }
-                }
-            }
-        }
-    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            background-color: #0B0B0D;
-            background-image: radial-gradient(circle at 50% 0%, #2a1505 0%, #0B0B0D 40%);
-        }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+        /* Optional: Add a simple hover effect for better user feedback */
+        .box-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
-</head>
-<body class="text-white font-sans antialiased min-h-screen p-6 md:p-12">
+  </head>
+  <body class="p-6 md:p-12 bg-gray-100 font-sans">
+    <div class="min-h-screen flex items-center justify-center w-full">
+      <div class="flex flex-col md:flex-row gap-8 w-full max-w-4xl justify-center">
 
-    <header class="max-w-7xl mx-auto mb-16 text-center">
-        <div class="inline-block px-4 py-1 mb-4 rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-primary text-xs font-bold tracking-widest uppercase">
-            Design System v1.0
-        </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
-            <span class="text-white">Action Game</span> <span class="text-brand-primary">Theme Kit</span>
-        </h1>
-        <p class="text-brand-textSec max-w-2xl mx-auto text-lg">
-            High-contrast, cinematic aesthetic designed for premium immersion.
-        </p>
-    </header>
+        <a 
+          href="game.html" 
+          target="_blank" 
+          class="box-link flex flex-1 items-center justify-center text-center p-12 bg-black text-white font-bold text-2xl uppercase rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-blue-600"
+        >
+          Game
+        </a>
 
-    <main class="max-w-7xl mx-auto space-y-16">
+        <a 
+          href="prop.html" 
+          target="_blank" 
+          class="box-link flex flex-1 items-center justify-center text-center p-12 bg-blue-600 text-white font-bold text-2xl uppercase rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-black"
+        >
+          Prop
+        </a>
 
-        <section>
-            <div class="flex items-center gap-4 mb-8 border-b border-brand-border pb-4">
-                <span class="bg-brand-card w-8 h-8 flex items-center justify-center rounded text-brand-textSec font-bold">1</span>
-                <h2 class="text-2xl font-bold">Core Color Palette</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-panel rounded-xl overflow-hidden group">
-                    <div class="h-32 bg-[#0B0B0D] relative group-hover:scale-105 transition-transform duration-500"></div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="font-bold text-white">Main Background</h3>
-                        </div>
-                        <code class="block bg-black/30 p-2 rounded text-sm text-brand-textSec mb-3">#0B0B0D</code>
-                        <p class="text-xs text-brand-textSec leading-relaxed">Cinematic, premium, high contrast canvas.</p>
-                    </div>
-                </div>
-
-                <div class="glass-panel rounded-xl overflow-hidden group">
-                    <div class="h-32 bg-[#131316] relative group-hover:scale-105 transition-transform duration-500"></div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-white mb-2">Section Background</h3>
-                        <code class="block bg-black/30 p-2 rounded text-sm text-brand-textSec mb-3">#131316</code>
-                        <p class="text-xs text-brand-textSec">Used for cards and distinct feature sections.</p>
-                    </div>
-                </div>
-
-                <div class="glass-panel rounded-xl overflow-hidden group border-brand-primary/30">
-                    <div class="h-32 bg-[#FF6A00] relative group-hover:scale-105 transition-transform duration-500 shadow-orange-glow"></div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-brand-primary mb-2">Primary Accent</h3>
-                        <code class="block bg-black/30 p-2 rounded text-sm text-brand-textSec mb-3">#FF6A00</code>
-                        <p class="text-xs text-brand-textSec">CTA buttons, highlights, progress bars.</p>
-                    </div>
-                </div>
-
-                <div class="glass-panel rounded-xl overflow-hidden group">
-                    <div class="h-32 bg-[#FFC400] relative group-hover:scale-105 transition-transform duration-500"></div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-brand-secondary mb-2">Secondary Accent</h3>
-                        <code class="block bg-black/30 p-2 rounded text-sm text-brand-textSec mb-3">#FFC400</code>
-                        <p class="text-xs text-brand-textSec">Warning, stats, badges, small highlights.</p>
-                    </div>
-                </div>
-
-                <div class="glass-panel rounded-xl p-5 flex flex-col justify-center gap-4">
-                    <div>
-                        <div class="flex items-center gap-3 mb-1">
-                            <div class="w-6 h-6 rounded bg-[#FFFFFF] border border-gray-600"></div>
-                            <span class="font-bold">Text Primary</span>
-                        </div>
-                        <code class="text-xs text-brand-textSec ml-9">#FFFFFF</code>
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-3 mb-1">
-                            <div class="w-6 h-6 rounded bg-[#C9C9C9]"></div>
-                            <span class="font-bold text-[#C9C9C9]">Text Secondary</span>
-                        </div>
-                        <code class="text-xs text-brand-textSec ml-9">#C9C9C9</code>
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-3 mb-1">
-                            <div class="w-6 h-6 rounded bg-[rgba(255,255,255,0.06)] border border-white/20"></div>
-                            <span class="font-bold text-gray-500">Border Lines</span>
-                        </div>
-                        <code class="text-xs text-brand-textSec ml-9">rgba(255,255,255,0.06)</code>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
-            <section>
-                <div class="flex items-center gap-4 mb-8 border-b border-brand-border pb-4">
-                    <span class="bg-brand-card w-8 h-8 flex items-center justify-center rounded text-brand-textSec font-bold">2</span>
-                    <h2 class="text-2xl font-bold">Interactions</h2>
-                </div>
-
-                <div class="glass-panel p-8 rounded-xl space-y-8">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <h4 class="text-sm font-semibold mb-1 text-brand-textSec">Primary Button</h4>
-                            <p class="text-xs text-gray-500">Attention grabbing</p>
-                        </div>
-                        <button class="bg-[#FF6A00] hover:bg-[#FF7E1A] text-white px-8 py-3 rounded font-bold transition-all shadow-[0_0_20px_rgba(255,106,0,0.4)] hover:shadow-[0_0_30px_rgba(255,106,0,0.6)]">
-                            Play Now
-                        </button>
-                    </div>
-
-                    <div class="h-px bg-brand-border"></div>
-
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <h4 class="text-sm font-semibold mb-1 text-brand-textSec">Secondary Button</h4>
-                            <p class="text-xs text-gray-500">Minimal look</p>
-                        </div>
-                        <button class="bg-transparent border border-[#FF6A00] text-[#FF6A00] hover:bg-[rgba(255,106,0,0.1)] px-8 py-3 rounded font-bold transition-all">
-                            Learn More
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="flex items-center gap-4 mb-8 border-b border-brand-border pb-4">
-                    <span class="bg-brand-card w-8 h-8 flex items-center justify-center rounded text-brand-textSec font-bold">3</span>
-                    <h2 class="text-2xl font-bold">Typography</h2>
-                </div>
-
-                <div class="glass-panel p-8 rounded-xl space-y-6">
-                    <div>
-                        <h1 class="text-4xl font-bold text-white mb-2">Heading Level 1</h1>
-                        <p class="text-xs text-gray-500 font-mono">#FFFFFF | Bold</p>
-                    </div>
-                    <div>
-                        <h2 class="text-2xl font-bold text-white mb-2">Heading Level 2</h2>
-                        <p class="text-xs text-gray-500 font-mono">#FFFFFF | Bold</p>
-                    </div>
-                    <div>
-                        <p class="text-[#C9C9C9] leading-relaxed">
-                            This is standard body text in <span class="text-[#FFC400]">Yellow Highlight (#FFC400)</span>. The paragraph color is Light Gray designed for readability against the dark background without causing eye strain.
-                        </p>
-                        <p class="text-xs text-gray-500 font-mono mt-2">#C9C9C9 | Regular</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <section>
-            <div class="flex items-center gap-4 mb-8 border-b border-brand-border pb-4">
-                <span class="bg-brand-card w-8 h-8 flex items-center justify-center rounded text-brand-textSec font-bold">4</span>
-                <h2 class="text-2xl font-bold">UI Components & Effects</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <div class="relative group">
-                    <div class="absolute -inset-0.5 bg-gradient-to-r from-[#FF6A00] to-[#FFC400] rounded-xl opacity-20 blur group-hover:opacity-40 transition duration-500"></div>
-                    <div class="relative h-full bg-[rgba(255,255,255,0.03)] backdrop-blur-xl border border-[rgba(255,255,255,0.06)] rounded-xl p-8 shadow-card-depth">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="w-12 h-12 rounded bg-[#FF6A00]/10 flex items-center justify-center text-[#FF6A00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <span class="text-xs text-[#FFC400] font-bold border border-[#FFC400]/20 px-2 py-1 rounded bg-[#FFC400]/10">NEW</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Glass Card Component</h3>
-                        <p class="text-[#C9C9C9] text-sm mb-6">Demonstrating the Glass Black background (rgba 255,255,255,0.03) and card shadow effect.</p>
-                        <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-[#FF6A00] w-2/3 shadow-[0_0_10px_#FF6A00]"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-8 rounded-xl flex flex-col justify-center space-y-8">
-                    <div class="flex items-center gap-6">
-                        <div class="w-16 h-16 rounded-full bg-[#FF6A00] shadow-[0_0_30px_rgba(255,106,0,0.5)] flex items-center justify-center text-xs font-bold">
-                            Orange Glow
-                        </div>
-                        <div>
-                            <p class="font-bold text-white">Primary Glow</p>
-                            <code class="text-xs text-gray-500">box-shadow: 0 0 30px rgba(255,106,0,0.5)</code>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-6">
-                        <div class="w-16 h-16 rounded-full bg-[#FFC400] shadow-[0_0_30px_rgba(255,196,0,0.4)] flex items-center justify-center text-xs font-bold text-black">
-                            Yellow Glow
-                        </div>
-                        <div>
-                            <p class="font-bold text-white">Secondary Glow</p>
-                            <code class="text-xs text-gray-500">box-shadow: 0 0 30px rgba(255,196,0,0.4)</code>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="mt-20 border-t border-brand-border pt-8 text-center">
-        <p class="text-brand-textSec text-sm">
-            <span class="text-[#FF6A00] hover:text-[#FF7E1A] cursor-pointer transition-colors">Client Project Name</span> © 2025
-        </p>
-    </footer>
-
-</body>
+      </div>
+    </div>
+  </body>
 </html>
