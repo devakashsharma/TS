@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arun: The Cursed Cloth | Lord of Light Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+            colors: {
+              brand: {
+                bg: "#0B0B0D",
+                card: "#131316",
+                primary: "#FF6A00",
+                primaryHover: "#FF7E1A",
+                secondary: "#FFC400",
+                textMain: "#FFFFFF",
+                textSec: "#C9C9C9",
+                border: "rgba(255,255,255,0.06)",
+                glass: "rgba(255,255,255,0.03)",
+              },
+            },
+            boxShadow: {
+              "orange-glow": "0 0 40px rgba(255,106,0,0.3)",
+              "card-depth": "0 20px 40px rgba(0,0,0,0.4)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #0b0b0d;
+        background-image: radial-gradient(
+          circle at 50% -10%,
+          #3a1c07 0%,
+          #0b0b0d 50%
+        );
+        scroll-behavior: smooth;
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(11, 11, 13, 0) 0%,
+          rgba(11, 11, 13, 1) 100%
+        );
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+    </style>
+  </head>
+  <body class="text-white font-sans antialiased">
+    <nav
+      class="fixed w-full z-50 px-6 py-4 glass-panel border-none bg-black/40"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 bg-brand-primary rounded-full flex items-center justify-center shadow-orange-glow"
+          >
+            <i class="fas fa-sun text-black text-sm"></i>
+          </div>
+          <span class="font-extrabold tracking-tighter text-xl uppercase"
+            >Lord of Light</span
+          >
+        </div>
+        <div
+          class="hidden md:flex gap-8 text-sm font-semibold tracking-wide uppercase"
+        >
+          <a href="#game" class="hover:text-brand-primary transition-colors"
+            >The Game</a
+          >
+          <a href="#studio" class="hover:text-brand-primary transition-colors"
+            >Studio</a
+          >
+          <a href="#careers" class="hover:text-brand-primary transition-colors"
+            >Careers</a
+          >
+          <a href="#contact" class="hover:text-brand-primary transition-colors"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-brand-primary text-white px-5 py-2 rounded text-xs font-bold uppercase hover:bg-brand-primaryHover transition-all"
+        >
+          Pre-Alpha Access
+        </button>
+      </div>
+    </nav>
+
+    <header
+      class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0 opacity-40">
+        <div
+          class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000')] bg-cover bg-center grayscale"
+        ></div>
+        <div class="hero-gradient absolute inset-0"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <div
+          class="inline-block px-4 py-1 mb-6 rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-primary text-xs font-bold tracking-widest uppercase"
+        >
+          <i class="fas fa-hammer mr-2"></i> Under Development
+        </div>
+        <h1
+          class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-6 leading-none"
+        >
+          ARUN:<br /><span class="text-brand-primary">THE CURSED CLOTH</span>
+        </h1>
+        <p
+          class="text-brand-textSec text-xl md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed"
+        >
+          A legendary warrior. A fragment of ancient power. An emotional journey
+          of destiny and sacrifice.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <button
+            class="bg-brand-primary hover:bg-brand-primaryHover text-white px-10 py-4 rounded font-extrabold text-lg transition-all shadow-orange-glow uppercase tracking-widest"
+          >
+            Watch Teaser <i class="fas fa-play ml-2"></i>
+          </button>
+          <button
+            class="glass-panel hover:bg-white/10 text-white px-10 py-4 rounded font-extrabold text-lg transition-all uppercase tracking-widest"
+          >
+            Follow Updates
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-50">
+        <div
+          class="w-6 h-10 border-2 border-white rounded-full flex justify-center pt-2"
+        >
+          <div
+            class="w-1 h-2 bg-brand-primary rounded-full animate-bounce"
+          ></div>
+        </div>
+      </div>
+    </header>
+
+    <section id="game" class="py-24 px-6 max-w-7xl mx-auto">
+      <div
+        class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4"
+      >
+        <div>
+          <h2
+            class="text-brand-primary font-bold uppercase tracking-widest text-sm mb-2"
+          >
+            Features
+          </h2>
+          <h3 class="text-4xl md:text-5xl font-extrabold">
+            Forged in Mythology
+          </h3>
+        </div>
+        <p class="text-brand-textSec max-w-md">
+          Experience a mythological world crafted with Unreal Engine precision
+          and cinematic storytelling.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="glass-panel p-8 rounded-2xl group hover:border-brand-primary/50 transition-all duration-500"
+        >
+          <div
+            class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary mb-6 group-hover:scale-110 transition-transform"
+          >
+            <i class="fas fa-fire-alt text-2xl"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-4">Melee & Magic</h4>
+          <p class="text-brand-textSec text-sm leading-relaxed">
+            Master the fluid combat system blending visceral swordplay with
+            destructive mystical powers.
+          </p>
+        </div>
+        <div
+          class="glass-panel p-8 rounded-2xl group hover:border-brand-primary/50 transition-all duration-500"
+        >
+          <div
+            class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary mb-6 group-hover:scale-110 transition-transform"
+          >
+            <i class="fas fa-tshirt text-2xl"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-4">The Cursed Cloth</h4>
+          <p class="text-brand-textSec text-sm leading-relaxed">
+            Unlock extraordinary abilities through character transformations
+            tied to the fragments of the cloth.
+          </p>
+        </div>
+        <div
+          class="glass-panel p-8 rounded-2xl group hover:border-brand-primary/50 transition-all duration-500"
+        >
+          <div
+            class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary mb-6 group-hover:scale-110 transition-transform"
+          >
+            <i class="fas fa-mountain text-2xl"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-4">Lush Environments</h4>
+          <p class="text-brand-textSec text-sm leading-relaxed">
+            Traverse through ancient temples, dense jungles, and burning
+            villages in a rich narrative landscape.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="studio"
+      class="py-24 bg-brand-card/50 border-y border-brand-border px-6"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2
+              class="text-brand-primary font-bold uppercase tracking-widest text-sm mb-4"
+            >
+              The Studio
+            </h2>
+            <h3 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+              Lord of Light Studio
+            </h3>
+            <p class="text-brand-textSec text-lg leading-relaxed mb-8">
+              We are an independent powerhouse dedicated to crafting immersive
+              stories and cinematic worlds. Our mission is to build
+              unforgettable games that connect with players globally, blending
+              mythology with modern gameplay.
+            </p>
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <span class="text-3xl font-extrabold text-brand-secondary"
+                  >Core</span
+                >
+                <p class="text-xs uppercase tracking-widest text-brand-textSec">
+                  Values
+                </p>
+              </div>
+              <div>
+                <span class="text-3xl font-extrabold text-brand-secondary"
+                  >Global</span
+                >
+                <p class="text-xs uppercase tracking-widest text-brand-textSec">
+                  Vision
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="glass-panel p-6 rounded-2xl border-l-4 border-brand-primary"
+            >
+              <h5 class="text-xl font-bold">Dipesh Chature</h5>
+              <p class="text-brand-primary text-xs font-bold uppercase mb-3">
+                Founder & Creative Director
+              </p>
+              <p class="text-brand-textSec text-sm">
+                Visionary mind behind Aruv's world-building and cinematic
+                direction.
+              </p>
+            </div>
+            <div
+              class="glass-panel p-6 rounded-2xl border-l-4 border-brand-secondary"
+            >
+              <h5 class="text-xl font-bold">Pallav Navrang</h5>
+              <p class="text-brand-secondary text-xs font-bold uppercase mb-3">
+                Co-Founder & Tech Lead
+              </p>
+              <p class="text-brand-textSec text-sm">
+                Managing technical execution and studio operations excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="careers" class="py-24 px-6 max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2
+          class="text-brand-primary font-bold uppercase tracking-widest text-sm mb-2"
+        >
+          Join the Journey
+        </h2>
+        <h3 class="text-4xl md:text-5xl font-extrabold">We Are Hiring</h3>
+      </div>
+
+      <div class="space-y-4 max-w-4xl mx-auto">
+        <div
+          class="glass-panel p-6 rounded-xl flex flex-col md:flex-row justify-between items-center group hover:bg-white/5 transition-all"
+        >
+          <div class="flex items-center gap-6 mb-4 md:mb-0">
+            <div
+              class="w-12 h-12 rounded bg-brand-secondary/10 flex items-center justify-center text-brand-secondary"
+            >
+              <i class="fas fa-code"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Unreal Engine Developer</h4>
+              <p class="text-brand-textSec text-xs">
+                C++ / Blueprints / Physics
+              </p>
+            </div>
+          </div>
+          <a
+            href="mailto:lordoflightstudioo@gmail.com"
+            class="border border-brand-primary/40 text-brand-primary px-6 py-2 rounded text-sm font-bold hover:bg-brand-primary hover:text-white transition-all"
+            >Apply Now</a
+          >
+        </div>
+        <div
+          class="glass-panel p-6 rounded-xl flex flex-col md:flex-row justify-between items-center group hover:bg-white/5 transition-all"
+        >
+          <div class="flex items-center gap-6 mb-4 md:mb-0">
+            <div
+              class="w-12 h-12 rounded bg-brand-secondary/10 flex items-center justify-center text-brand-secondary"
+            >
+              <i class="fas fa-cube"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">3D Artist / Animator</h4>
+              <p class="text-brand-textSec text-xs">
+                Character Modeling / Rigging
+              </p>
+            </div>
+          </div>
+          <a
+            href="mailto:lordoflightstudioo@gmail.com"
+            class="border border-brand-primary/40 text-brand-primary px-6 py-2 rounded text-sm font-bold hover:bg-brand-primary hover:text-white transition-all"
+            >Apply Now</a
+          >
+        </div>
+        <div
+          class="glass-panel p-6 rounded-xl flex flex-col md:flex-row justify-between items-center group hover:bg-white/5 transition-all"
+        >
+          <div class="flex items-center gap-6 mb-4 md:mb-0">
+            <div
+              class="w-12 h-12 rounded bg-brand-secondary/10 flex items-center justify-center text-brand-secondary"
+            >
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">UI / UX Designer</h4>
+              <p class="text-brand-textSec text-xs">
+                Figma / Game Interface Design
+              </p>
+            </div>
+          </div>
+          <a
+            href="mailto:lordoflightstudioo@gmail.com"
+            class="border border-brand-primary/40 text-brand-primary px-6 py-2 rounded text-sm font-bold hover:bg-brand-primary hover:text-white transition-all"
+            >Apply Now</a
+          >
+        </div>
+      </div>
+
+      <p class="text-center mt-10 text-brand-textSec italic">
+        "We value passion more than experience."
+      </p>
+    </section>
+
+    <footer
+      id="contact"
+      class="bg-black border-t border-brand-border pt-20 pb-10 px-6"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16"
+      >
+        <div class="space-y-6">
+          <div class="flex items-center gap-2">
+            <div
+              class="w-8 h-8 bg-brand-primary rounded-full flex items-center justify-center"
+            >
+              <i class="fas fa-sun text-black text-sm"></i>
+            </div>
+            <span class="font-extrabold tracking-tighter text-xl uppercase"
+              >Lord of Light</span
+            >
+          </div>
+          <p class="text-brand-textSec text-sm">
+            Deen Dayal 3rd floor,<br />Bilaspur, Chhattisgarh 495001
+          </p>
+          <div class="flex gap-4 text-xl">
+            <a href="#" class="text-brand-textSec hover:text-brand-primary"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-brand-textSec hover:text-brand-primary"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-brand-textSec hover:text-brand-primary"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="text-brand-textSec hover:text-brand-primary"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <h4 class="font-bold text-lg uppercase tracking-widest">Inquiries</h4>
+          <div class="space-y-4">
+            <a
+              href="mailto:contact@lordoflightstudioo.com"
+              class="block text-brand-textSec hover:text-white transition-colors"
+            >
+              <i class="fas fa-envelope text-brand-primary mr-2"></i>
+              contact@lordoflightstudioo.com
+            </a>
+            <a
+              href="mailto:lordoflightstudioo@gmail.com"
+              class="block text-brand-textSec hover:text-white transition-colors"
+            >
+              <i class="fas fa-briefcase text-brand-primary mr-2"></i> Career
+              Inquiries
+            </a>
+          </div>
+        </div>
+
+        <div class="glass-panel p-6 rounded-xl">
+          <h4 class="font-bold mb-4">Newsletter</h4>
+          <p class="text-xs text-brand-textSec mb-4">
+            Get development logs and exclusive behind-the-scenes content.
+          </p>
+          <div class="flex gap-2">
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="bg-black/40 border border-brand-border rounded px-4 py-2 text-sm w-full focus:outline-none focus:border-brand-primary"
+            />
+            <button
+              class="bg-brand-primary px-4 py-2 rounded text-black font-bold text-sm"
+            >
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto border-t border-brand-border pt-8 flex flex-col md:row justify-between items-center gap-4"
+      >
+        <p class="text-xs text-brand-textSec uppercase tracking-widest">
+          © 2025 Lord of Light Studio. All Rights Reserved.
+        </p>
+        <div
+          class="flex gap-6 text-[10px] uppercase font-bold text-brand-textSec tracking-widest"
+        >
+          <a href="#" class="hover:text-white transition-colors"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-white transition-colors"
+            >Terms of Service</a
+          >
+        </div>
+        <p class="text-xs text-brand-textSec uppercase tracking-widest">Made with ❤️ by <a href="https://devakashsharma.netlify.app" class="underline hover:text-brand-primaryHover hover:no-underline duration-300 all">Shinobi</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
