@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Prestige Noir – Theme Preview</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { 
+        sans: ["Montserrat", "sans-serif"],
+        display: ["Bebas Neue", "sans-serif"] 
+      },
+      colors: {
+        brand: {
+          bg: "#050505",
+          card: "#0D0D0F",
+          primary: "#E2B853",
+          primaryHover: "#F3CF7A",
+          textMain: "#FFFFFF",
+          textSec: "#94A3B8",
+          border: "rgba(255,255,255,0.08)",
+        },
+      },
+      boxShadow: {
+        premium: "0 20px 50px rgba(0,0,0,0.5)",
+        goldGlow: "0 0 30px rgba(226,184,83,0.15)",
+      },
+    },
+  },
+};
+</script>
+
+<style>
+body {
+  background-color: #050505;
+  background-image: 
+    radial-gradient(circle at 0% 0%, #16161a 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, #0a0a0c 0%, transparent 50%);
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.glass-panel {
+  background: rgba(13, 13, 15, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: #E2B853;
+  background: rgba(226, 184, 83, 0.03);
+}
+</style>
+</head>
+
+<body class="text-brand-textMain font-sans">
+
+<!-- NAVBAR -->
+<nav class="border-b border-brand-border py-4 px-10 flex justify-between items-center bg-black">
+  <h1 class="text-3xl font-display tracking-widest text-white">Luminarch Studio</h1>
+  <div class="space-x-8 text-sm uppercase tracking-wider text-white/80">
+    <a href="#" class="hover:text-brand-primary transition">Work</a>
+    <a href="#" class="hover:text-brand-primary transition">Studio</a>
+    <a href="#" class="hover:text-brand-primary transition">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="relative text-center py-28 px-6">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+       class="absolute inset-0 w-full h-full object-cover -z-10 filter grayscale brightness-[30%]" 
+       alt="image"
+    />
+
+  <h2 class="text-7xl font-display text-white uppercase mb-6">
+    The Prestige Noir
+  </h2>
+  <p class="max-w-2xl mx-auto text-brand-textSec text-lg mb-10">
+    Deep matte blacks. Stark white typography. Titanium gold accents.
+    A premium cinematic aesthetic inspired by modern AAA studios.
+  </p>
+
+  <button class="bg-brand-primary text-black px-10 py-3 uppercase tracking-wider rounded-none hover:bg-brand-primaryHover transition shadow-goldGlow">
+    Enter Studio
+  </button>
+</section>
+
+<!-- COLOR PALETTE SECTION -->
+<section class="py-20 px-10">
+  <h2 class="text-5xl font-display uppercase mb-12 text-center">Color System</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="glass-panel p-8 shadow-premium">
+      <div class="h-24 bg-[#050505] border border-brand-border mb-6"></div>
+      <h3 class="text-2xl text-brand-primary">Primary Background</h3>
+      <p class="text-brand-textSec text-sm mt-2">#050505 — Deep Matte Black</p>
+    </div>
+
+    <div class="glass-panel p-8 shadow-premium">
+      <div class="h-24 bg-[#0D0D0F] border border-brand-border mb-6"></div>
+      <h3 class="text-2xl text-brand-primary">Surface / Card</h3>
+      <p class="text-brand-textSec text-sm mt-2">#0D0D0F — Elevated Black</p>
+    </div>
+
+    <div class="glass-panel p-8 shadow-premium">
+      <div class="h-24 bg-[#E2B853] mb-6"></div>
+      <h3 class="text-2xl text-brand-primary">Primary Accent</h3>
+      <p class="text-brand-textSec text-sm mt-2">#E2B853 — Titanium Gold</p>
+    </div>
+
+    <div class="glass-panel p-8 shadow-premium">
+      <div class="h-24 bg-[#FFFFFF] mb-6"></div>
+      <h3 class="text-2xl text-brand-primary">Secondary Accent</h3>
+      <p class="text-brand-textSec text-sm mt-2">#FFFFFF — Stark White</p>
+    </div>
+
+    <div class="glass-panel p-8 shadow-premium">
+      <div class="h-24 bg-[#94A3B8] mb-6"></div>
+      <h3 class="text-2xl text-brand-primary">Neutral Text</h3>
+      <p class="text-brand-textSec text-sm mt-2">#94A3B8 — Muted Slate</p>
+    </div>
+
+    <div class="glass-panel p-8 shadow-premium">
+      <div class="h-24 bg-white/10 border border-white/10 mb-6"></div>
+      <h3 class="text-2xl text-brand-primary">Border / Glass</h3>
+      <p class="text-brand-textSec text-sm mt-2">rgba(255,255,255,0.08)</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TYPOGRAPHY SECTION -->
+<section class="py-20 px-10 border-t border-brand-border">
+  <h2 class="text-5xl font-display uppercase mb-12 text-center">Typography</h2>
+
+  <div class="max-w-4xl mx-auto space-y-10">
+
+    <div>
+      <h1 class="text-6xl">Blockbuster Heading – Bebas Neue</h1>
+      <h2 class="text-4xl">Cinematic Subheading</h2>
+    </div>
+
+    <div>
+      <p class="text-lg text-brand-textMain">
+        This is body text using Montserrat. It is clean, modern, and highly readable.
+      </p>
+      <p class="text-brand-textSec mt-4">
+        Secondary text uses muted slate to maintain hierarchy and luxury balance.
+      </p>
+    </div>
+
+    <div class="space-x-6">
+      <button class="bg-brand-primary text-black px-8 py-3 uppercase rounded-none hover:bg-brand-primaryHover transition">
+        Primary Button
+      </button>
+      <button class="border border-brand-border px-8 py-3 uppercase rounded-none hover:border-brand-primary hover:text-brand-primary transition">
+        Secondary Button
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-10 border-t border-brand-border text-brand-textSec text-sm">
+  © 2026 Luminarch Studio — The Prestige Noir Theme
+</footer>
+
+</body>
+</html>

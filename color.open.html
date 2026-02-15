@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Theme Comparison</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Theme 1: Modern Luxury */
+            --theme1-bg: #0B1C2D;
+            --theme1-primary: #D4AF37;
+            --theme1-text: #FFFFFF;
+            --theme1-text-secondary: #9CA3AF;
+            
+            /* Theme 2: Modern Tech/SaaS */
+            --theme2-bg: #F8FAFC;
+            --theme2-primary: #10B981;
+            --theme2-text: #0F172A;
+            --theme2-text-secondary: #64748B;
+            
+            /* Theme 3: Ultra Luxury */
+            --theme3-bg: #000000;
+            --theme3-primary: #B76E79;
+            --theme3-text: #FFFFFF;
+            --theme3-text-secondary: #999999;
+            --theme3-accent: #F7E7CE;
+        }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1, h2, h3 { 
+            font-family: 'Playfair Display', serif; 
+            margin: 0;
+        }
+        
+        .theme-modern-luxury {
+            background-color: var(--theme1-bg);
+            color: var(--theme1-text);
+        }
+        
+        .theme-modern-tech {
+            background-color: var(--theme2-bg);
+            color: var(--theme2-text);
+        }
+        
+        .theme-ultra-luxury {
+            background-color: var(--theme3-bg);
+            color: var(--theme3-text);
+        }
+        
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+        
+        .section-padding {
+            padding: 3rem 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="min-h-screen flex flex-col justify-center relative section-padding theme-modern-luxury">
+        <nav class="absolute top-0 left-0 w-full p-8 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-widest">
+                ESTATE<span style="color: var(--theme1-primary);">.CO</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm" style="color: var(--theme1-text-secondary);">
+                <a href="#" class="hover:text-[var(--theme1-primary)] transition-colors">Properties</a>
+                <a href="#" class="hover:text-[var(--theme1-primary)] transition-colors">Agents</a>
+                <a href="#" class="hover:text-[var(--theme1-primary)] transition-colors">Contact</a>
+            </div>
+            <button 
+                class="px-6 py-2 rounded font-semibold btn-primary" 
+                style="background-color: var(--theme1-primary); color: var(--theme1-bg);">
+                Login
+            </button>
+        </nav>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="uppercase tracking-[0.2em] text-sm font-semibold mb-4 block" 
+                      style="color: var(--theme1-primary);">
+                    Invest in Excellence
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                    Premium Living for <br/>
+                    <span class="italic font-light">The Future.</span>
+                </h1>
+                <p class="text-lg mb-8 max-w-md" style="color: var(--theme1-text-secondary);">
+                    Experience the pinnacle of real estate investment. Trusted by over 10,000 investors worldwide.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button 
+                        class="px-8 py-4 rounded font-semibold shadow-lg btn-primary"
+                        style="background-color: var(--theme1-primary); color: var(--theme1-bg);">
+                        Explore Properties
+                    </button>
+                    <button 
+                        class="px-8 py-4 rounded font-semibold border border-gray-600 hover:border-[var(--theme1-primary)] transition-colors"
+                        style="color: var(--theme1-text);">
+                        Watch Video
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="rounded-xl overflow-hidden shadow-2xl p-6 relative z-10" 
+                     style="background-color: #111827; border: 1px solid #374151;">
+                    <img 
+                        src="https://images.unsplash.com/photo-1600596542815-e32870110274?auto=format&fit=crop&q=80&w=1000" 
+                        alt="Modern Luxury Property" 
+                        class="w-full h-64 object-cover rounded mb-4 opacity-90 hover:opacity-100 transition-opacity">
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <h3 class="text-xl mb-1">The Grand Horizon</h3>
+                            <p class="text-sm" style="color: var(--theme1-text-secondary);">Beverly Hills, CA</p>
+                        </div>
+                        <span class="text-xl font-bold" style="color: var(--theme1-primary);">$4,500,000</span>
+                    </div>
+                </div>
+                <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl opacity-20" 
+                     style="background-color: var(--theme1-primary);"></div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-4 left-0 w-full text-center text-xs opacity-30">
+            THEME: MODERN LUXURY
+        </div>
+    </section>
+</body>
+</html>
