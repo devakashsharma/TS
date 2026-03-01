@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luminarch Studio | Immersive Worlds</title>
+    <title>Luminarch Studio | Crafting Immersive Worlds</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -21,12 +20,14 @@
             brand: {
               gold: '#E2B853',
               darker: '#050505',
-              accent: '#16161a'
+              accent: '#16161a',
+              muted: '#A1A1AA'
             },
           },
           boxShadow: {
             premium: "0 20px 50px rgba(0,0,0,0.5)",
             goldGlow: "0 0 30px rgba(226,184,83,0.15)",
+            innerGold: "inset 0 0 20px rgba(226,184,83,0.05)",
           },
         },
       },
@@ -41,9 +42,10 @@
         radial-gradient(circle at 100% 100%, #0a0a0c 0%, transparent 50%);
       letter-spacing: -0.01em;
       color: #ffffff;
+      scroll-behavior: smooth;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       font-family: 'Bebas Neue', sans-serif;
       letter-spacing: 0.05em;
     }
@@ -56,9 +58,9 @@
     }
 
     .glass-panel:hover {
-      border-color: #E2B853;
+      border-color: rgba(226, 184, 83, 0.5);
       background: rgba(226, 184, 83, 0.03);
-      transform: translateY(-5px);
+      transform: translateY(-8px);
     }
 
     .hero-gradient {
@@ -73,28 +75,42 @@
         font-size: 1.25rem;
         transition: all 0.3s ease;
         letter-spacing: 0.1em;
+        display: inline-block;
     }
 
     .btn-primary:hover {
         background: #fff;
-        box-shadow: 0 0 20px rgba(226,184,83,0.4);
+        box-shadow: 0 0 30px rgba(226,184,83,0.6);
+        transform: scale(1.05);
     }
+
+    .timeline-dot {
+        width: 12px;
+        height: 12px;
+        background: #E2B853;
+        border-radius: 50%;
+        box-shadow: 0 0 15px #E2B853;
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #050505; }
+    ::-webkit-scrollbar-thumb { background: #E2B853; border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center bg-gradient-to-b from-black/90 to-transparent backdrop-blur-sm">
         <div class="text-2xl font-display tracking-widest text-white">
             LUMINARCH <span class="text-brand-gold">STUDIO</span>
         </div>
-        <div class="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
-            <a href="#" class="hover:text-brand-gold transition">Games</a>
-            <a href="#" class="hover:text-brand-gold transition">Studio</a>
-            <a href="#" class="hover:text-brand-gold transition">Careers</a>
-            <a href="#" class="hover:text-brand-gold transition">News</a>
+        <div class="hidden md:flex space-x-10 text-xs font-medium uppercase tracking-[0.2em]">
+            <a href="#games" class="hover:text-brand-gold transition">Games</a>
+            <a href="#studio" class="hover:text-brand-gold transition">Studio</a>
+            <a href="#journey" class="hover:text-brand-gold transition">Journey</a>
+            <a href="#careers" class="hover:text-brand-gold transition">Careers</a>
         </div>
         <div>
-            <button class="border border-white/20 px-6 py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition">Support</button>
+            <button class="border border-brand-gold/40 px-6 py-2 text-[10px] uppercase tracking-widest hover:bg-brand-gold hover:text-black transition">Support</button>
         </div>
     </nav>
 
@@ -103,71 +119,159 @@
             <div class="absolute inset-0 bg-black/40"></div>
             <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2070" 
                  alt="Arun Game World" 
-                 class="w-full h-full object-cover opacity-60">
+                 class="w-full h-full object-cover opacity-50 scale-105 animate-[pulse_10s_infinite]">
             <div class="hero-gradient absolute inset-0"></div>
         </div>
 
         <div class="container mx-auto px-8 lg:px-20">
-            <div class="max-w-3xl">
-                <h2 class="text-brand-gold text-2xl mb-2">NOW IN DEVELOPMENT</h2>
-                <h1 class="text-7xl md:text-9xl mb-4 leading-none">ARUN:<br><span class="text-white/90">THE CURSED CLOTH</span></h1>
-                <p class="text-xl text-gray-300 font-light mb-8 leading-relaxed max-w-xl">
-                    A legendary warrior. A fragment of ancient power. An emotional journey of destiny and sacrifice.
+            <div class="max-w-4xl">
+                <h2 class="text-brand-gold text-xl md:text-2xl mb-2 tracking-[0.3em] font-display">CURRENTLY IN PRODUCTION</h2>
+                <h1 class="text-7xl md:text-9xl mb-4 leading-none uppercase">ARUN:<br><span class="text-white/90">THE CURSED CLOTH</span></h1>
+                <p class="text-lg md:text-xl text-gray-300 font-light mb-8 leading-relaxed max-w-xl italic">
+                    "A legendary warrior. A fragment of ancient power. An emotional journey of destiny and sacrifice."
                 </p>
-                <div class="flex space-x-4">
+                <div class="flex flex-wrap gap-4">
                     <button class="btn-primary">Watch Trailer</button>
-                    <button class="px-8 py-3 border border-white/30 font-display text-xl uppercase tracking-widest hover:bg-white/10 transition">View Details</button>
+                    <button class="px-8 py-3 border border-white/20 font-display text-xl uppercase tracking-widest hover:bg-white/5 transition flex items-center group">
+                        View Details 
+                        <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-32 px-8 lg:px-20 relative overflow-hidden">
+    <section id="studio" class="py-32 px-8 lg:px-20 bg-black">
         <div class="container mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                <div class="glass-panel p-12 rounded-sm shadow-premium">
-                    <h2 class="text-5xl mb-6">LUMINARCH STUDIO</h2>
-                    <p class="text-gray-400 leading-loose mb-8 text-lg">
-                        We are an independent powerhouse dedicated to crafting immersive stories and cinematic worlds. Our mission is to build unforgettable games that connect with players globally, blending mythology with modern gameplay.
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h2 class="text-brand-gold text-xl tracking-widest mb-4">OUR VISION</h2>
+                    <h3 class="text-6xl mb-8">BUILDING STORIES<br>THAT LAST</h3>
+                    <p class="text-gray-400 leading-loose mb-6 text-lg">
+                        Luminarch Studio was founded to create meaningful, story-driven digital experiences that blend creativity, technology, and strong artistic direction. We focus on original IPs and immersive storytelling that connects with players globally.
                     </p>
-                    <a href="#" class="text-brand-gold border-b border-brand-gold/30 pb-1 hover:border-brand-gold transition uppercase tracking-widest text-sm font-bold">Learn more about our vision</a>
+                    <p class="text-gray-500 mb-10 italic">
+                        "We believe that powerful ideas, when executed with discipline and the right team, can compete globally regardless of scale."
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="border-l-2 border-brand-gold pl-4 py-2">
+                            <h4 class="text-brand-gold text-2xl">CREATIVITY</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-gray-500">The Spark</p>
+                        </div>
+                        <div class="border-l-2 border-brand-gold pl-4 py-2">
+                            <h4 class="text-brand-gold text-2xl">CONSISTENCY</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-gray-500">The Discipline</p>
+                        </div>
+                        <div class="border-l-2 border-brand-gold pl-4 py-2">
+                            <h4 class="text-brand-gold text-2xl">COLLABORATION</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-gray-500">The Team</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="h-64 bg-gray-900 rounded-sm glass-panel flex items-center justify-center">
-                         <span class="text-brand-gold/20 text-4xl font-display">CINEMATIC</span>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="glass-panel p-10 rounded-sm">
+                        <h4 class="text-3xl mb-4 text-brand-gold">CULTURE FIRST</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Our work culture encourages learning, ownership, and long-term commitment rather than short-term results. We are building step by step, with patience and purpose.
+                        </p>
                     </div>
-                    <div class="h-64 bg-gray-900 rounded-sm glass-panel mt-12 flex items-center justify-center">
-                         <span class="text-brand-gold/20 text-4xl font-display">MYTHOLOGY</span>
+                    <div class="h-64 relative group overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition duration-700" alt="image">
+                        <div class="absolute inset-0 flex items-center justify-center border border-white/10">
+                            <span class="text-brand-gold text-4xl font-display tracking-widest">CINEMATIC MYTHOLOGY</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-black/50">
-        <div class="container mx-auto px-8">
-            <h3 class="text-4xl mb-12 text-center">Featured Projects</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group relative aspect-[16/9] overflow-hidden cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&q=80&w=1000" alt="image" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-                    <div class="absolute bottom-6 left-6">
-                        <h4 class="text-2xl font-display">ARUN</h4>
-                        <p class="text-xs text-brand-gold tracking-[0.2em]">ACTION ADVENTURE</p>
-                    </div>
+    <section id="journey" class="py-32 bg-[#080808] px-8 lg:px-20 border-y border-white/5">
+        <div class="container mx-auto">
+            <h2 class="text-5xl text-center mb-20 tracking-widest">THE <span class="text-brand-gold">JOURNEY</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="glass-panel p-8 relative">
+                    <div class="text-brand-gold font-display text-4xl mb-4">01</div>
+                    <h4 class="text-2xl mb-2">FOUNDATION</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Defining the vision, learning pipelines, and experimentation to build original, globally relevant IPs.</p>
+                    <div class="mt-6 text-[10px] uppercase tracking-widest text-brand-gold/60">Complete</div>
                 </div>
                 
-                <div class="group relative aspect-[16/9] overflow-hidden border border-white/5 bg-white/5">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <span class="text-white/10 font-display text-2xl tracking-widest">UNANNOUNCED PROJECT</span>
-                    </div>
+                <div class="glass-panel p-8 relative">
+                    <div class="text-brand-gold font-display text-4xl mb-4">02</div>
+                    <h4 class="text-2xl mb-2">CORE BUILDING</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Active pre-production. Shaping lore, character design, and environment concepts for our first major titles.</p>
+                    <div class="mt-6 text-[10px] uppercase tracking-widest text-brand-gold/60">Complete</div>
                 </div>
 
-                <div class="group relative aspect-[16/9] overflow-hidden border border-white/5 bg-white/5">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <span class="text-white/10 font-display text-2xl tracking-widest">UNANNOUNCED PROJECT</span>
-                    </div>
+                <div class="glass-panel p-8 relative border-brand-gold/30 shadow-goldGlow">
+                    <div class="text-brand-gold font-display text-4xl mb-4">03</div>
+                    <h4 class="text-2xl mb-2">PRODUCTION</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Current phase: Building the production pipeline and active development on original narrative-driven titles.</p>
+                    <div class="mt-6 text-[10px] uppercase tracking-widest text-brand-gold animate-pulse">In Progress</div>
+                </div>
+
+                <div class="glass-panel p-8 relative bg-white/5">
+                    <div class="text-white/20 font-display text-4xl mb-4">04</div>
+                    <h4 class="text-2xl mb-2 text-white/40">THE ROAD FORWARD</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">Completing playable builds, releasing official trailers, and expanding the team for global launch.</p>
+                    <div class="mt-6 text-[10px] uppercase tracking-widest text-gray-600">Upcoming</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="careers" class="py-32 px-8 lg:px-20">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-brand-gold text-xl tracking-widest mb-4">JOIN THE COVENANT</h2>
+                    <h3 class="text-6xl mb-6 uppercase">WE ARE HIRING</h3>
+                    <p class="text-gray-400">We are looking for passionate creators who care about storytelling and long-term growth. At Luminarch, you don’t just execute tasks—you shape the studio.</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-sm uppercase tracking-widest text-gray-500">All roles are Remote / Hybrid</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="glass-panel p-6 flex justify-between items-center group cursor-pointer">
+                    <span class="font-medium tracking-wide group-hover:text-brand-gold transition">Game Developers (Unity/Unreal)</span>
+                    <span class="text-xs text-gray-600">→</span>
+                </div>
+                <div class="glass-panel p-6 flex justify-between items-center group cursor-pointer">
+                    <span class="font-medium tracking-wide group-hover:text-brand-gold transition">3D Artists (Env/Props)</span>
+                    <span class="text-xs text-gray-600">→</span>
+                </div>
+                <div class="glass-panel p-6 flex justify-between items-center group cursor-pointer">
+                    <span class="font-medium tracking-wide group-hover:text-brand-gold transition">Animators (Gameplay)</span>
+                    <span class="text-xs text-gray-600">→</span>
+                </div>
+                <div class="glass-panel p-6 flex justify-between items-center group cursor-pointer">
+                    <span class="font-medium tracking-wide group-hover:text-brand-gold transition">Level Designers</span>
+                    <span class="text-xs text-gray-600">→</span>
+                </div>
+                <div class="glass-panel p-6 flex justify-between items-center group cursor-pointer">
+                    <span class="font-medium tracking-wide group-hover:text-brand-gold transition">UI/UX Designers</span>
+                    <span class="text-xs text-gray-600">→</span>
+                </div>
+                <div class="glass-panel p-6 flex justify-between items-center group cursor-pointer">
+                    <span class="font-medium tracking-wide group-hover:text-brand-gold transition">Concept Artists</span>
+                    <span class="text-xs text-gray-600">→</span>
+                </div>
+                <div class="glass-panel p-6 flex justify-between items-center group cursor-pointer">
+                    <span class="font-medium tracking-wide group-hover:text-brand-gold transition">Sound & Music Designers</span>
+                    <span class="text-xs text-gray-600">→</span>
+                </div>
+                <div class="glass-panel p-6 flex justify-between items-center group cursor-pointer">
+                    <span class="font-medium tracking-wide group-hover:text-brand-gold transition">Marketing & Community</span>
+                    <span class="text-xs text-gray-600">→</span>
+                </div>
+                <div class="bg-brand-gold p-6 flex justify-center items-center group cursor-pointer">
+                    <span class="font-display text-black text-xl tracking-widest">SEND YOUR PORTFOLIO</span>
                 </div>
             </div>
         </div>
@@ -179,9 +283,9 @@
                 LUMINARCH <span class="text-brand-gold">STUDIO</span>
             </div>
             <div class="flex space-x-8 text-[10px] uppercase tracking-[0.3em]">
-                <a href="#">Privacy</a>
-                <a href="#">Legal</a>
-                <a href="#">Contact</a>
+                <a href="#" class="hover:text-brand-gold transition">Privacy</a>
+                <a href="#" class="hover:text-brand-gold transition">Legal</a>
+                <a href="#" class="hover:text-brand-gold transition">Contact</a>
             </div>
             <div class="mt-8 md:mt-0 text-[10px] uppercase tracking-widest">
                 &copy; 2026 Luminarch Studio. All rights reserved.

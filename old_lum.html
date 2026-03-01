@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminarch Studio | Immersive Worlds</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { 
+            sans: ["Montserrat", "sans-serif"],
+            display: ["Bebas Neue", "sans-serif"] 
+          },
+          colors: {
+            brand: {
+              gold: '#E2B853',
+              darker: '#050505',
+              accent: '#16161a'
+            },
+          },
+          boxShadow: {
+            premium: "0 20px 50px rgba(0,0,0,0.5)",
+            goldGlow: "0 0 30px rgba(226,184,83,0.15)",
+          },
+        },
+      },
+    };
+    </script>
+
+    <style>
+    body {
+      background-color: #050505;
+      background-image: 
+        radial-gradient(circle at 0% 0%, #16161a 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, #0a0a0c 0%, transparent 50%);
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.05em;
+    }
+
+    .glass-panel {
+      background: rgba(13, 13, 15, 0.7);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .glass-panel:hover {
+      border-color: #E2B853;
+      background: rgba(226, 184, 83, 0.03);
+      transform: translateY(-5px);
+    }
+
+    .hero-gradient {
+        background: linear-gradient(180deg, rgba(5,5,5,0) 0%, rgba(5,5,5,1) 90%);
+    }
+
+    .btn-primary {
+        background: #E2B853;
+        color: #050505;
+        padding: 0.75rem 2.5rem;
+        font-family: 'Bebas Neue';
+        font-size: 1.25rem;
+        transition: all 0.3s ease;
+        letter-spacing: 0.1em;
+    }
+
+    .btn-primary:hover {
+        background: #fff;
+        box-shadow: 0 0 20px rgba(226,184,83,0.4);
+    }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
+        <div class="text-2xl font-display tracking-widest text-white">
+            LUMINARCH <span class="text-brand-gold">STUDIO</span>
+        </div>
+        <div class="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
+            <a href="#" class="hover:text-brand-gold transition">Games</a>
+            <a href="#" class="hover:text-brand-gold transition">Studio</a>
+            <a href="#" class="hover:text-brand-gold transition">Careers</a>
+            <a href="#" class="hover:text-brand-gold transition">News</a>
+        </div>
+        <div>
+            <button class="border border-white/20 px-6 py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition">Support</button>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-end pb-24 overflow-hidden">
+        <div class="absolute inset-0 z-[-1]">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2070" 
+                 alt="Arun Game World" 
+                 class="w-full h-full object-cover opacity-60">
+            <div class="hero-gradient absolute inset-0"></div>
+        </div>
+
+        <div class="container mx-auto px-8 lg:px-20">
+            <div class="max-w-3xl">
+                <h2 class="text-brand-gold text-2xl mb-2">NOW IN DEVELOPMENT</h2>
+                <h1 class="text-7xl md:text-9xl mb-4 leading-none">ARUN:<br><span class="text-white/90">THE CURSED CLOTH</span></h1>
+                <p class="text-xl text-gray-300 font-light mb-8 leading-relaxed max-w-xl">
+                    A legendary warrior. A fragment of ancient power. An emotional journey of destiny and sacrifice.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="btn-primary">Watch Trailer</button>
+                    <button class="px-8 py-3 border border-white/30 font-display text-xl uppercase tracking-widest hover:bg-white/10 transition">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-8 lg:px-20 relative overflow-hidden">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="glass-panel p-12 rounded-sm shadow-premium">
+                    <h2 class="text-5xl mb-6">LUMINARCH STUDIO</h2>
+                    <p class="text-gray-400 leading-loose mb-8 text-lg">
+                        We are an independent powerhouse dedicated to crafting immersive stories and cinematic worlds. Our mission is to build unforgettable games that connect with players globally, blending mythology with modern gameplay.
+                    </p>
+                    <a href="#" class="text-brand-gold border-b border-brand-gold/30 pb-1 hover:border-brand-gold transition uppercase tracking-widest text-sm font-bold">Learn more about our vision</a>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="h-64 bg-gray-900 rounded-sm glass-panel flex items-center justify-center">
+                         <span class="text-brand-gold/20 text-4xl font-display">CINEMATIC</span>
+                    </div>
+                    <div class="h-64 bg-gray-900 rounded-sm glass-panel mt-12 flex items-center justify-center">
+                         <span class="text-brand-gold/20 text-4xl font-display">MYTHOLOGY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-black/50">
+        <div class="container mx-auto px-8">
+            <h3 class="text-4xl mb-12 text-center">Featured Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group relative aspect-[16/9] overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&q=80&w=1000" alt="image" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h4 class="text-2xl font-display">ARUN</h4>
+                        <p class="text-xs text-brand-gold tracking-[0.2em]">ACTION ADVENTURE</p>
+                    </div>
+                </div>
+                
+                <div class="group relative aspect-[16/9] overflow-hidden border border-white/5 bg-white/5">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-white/10 font-display text-2xl tracking-widest">UNANNOUNCED PROJECT</span>
+                    </div>
+                </div>
+
+                <div class="group relative aspect-[16/9] overflow-hidden border border-white/5 bg-white/5">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-white/10 font-display text-2xl tracking-widest">UNANNOUNCED PROJECT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 px-8">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center opacity-60">
+            <div class="font-display text-xl tracking-tighter mb-8 md:mb-0">
+                LUMINARCH <span class="text-brand-gold">STUDIO</span>
+            </div>
+            <div class="flex space-x-8 text-[10px] uppercase tracking-[0.3em]">
+                <a href="#">Privacy</a>
+                <a href="#">Legal</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="mt-8 md:mt-0 text-[10px] uppercase tracking-widest">
+                &copy; 2026 Luminarch Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
