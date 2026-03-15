@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luminarch Studio | Crafting Immersive Worlds</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="./lum-logo.png" type="image/x-icon" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              display: ["Bebas Neue", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                gold: "#E2B853",
+                darker: "#050505",
+                accent: "#16161a",
+                muted: "#A1A1AA",
+              },
+            },
+            boxShadow: {
+              premium: "0 20px 50px rgba(0,0,0,0.5)",
+              goldGlow: "0 0 30px rgba(226,184,83,0.15)",
+              innerGold: "inset 0 0 20px rgba(226,184,83,0.05)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        background-color: #050505;
+        background-image:
+          radial-gradient(circle at 0% 0%, #16161a 0%, transparent 50%),
+          radial-gradient(circle at 100% 100%, #0a0a0c 0%, transparent 50%);
+        letter-spacing: -0.01em;
+        color: #ffffff;
+        scroll-behavior: smooth;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 0.05em;
+      }
+
+      .glass-panel {
+        background: rgba(13, 13, 15, 0.7);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .glass-panel:hover {
+        border-color: rgba(226, 184, 83, 0.5);
+        background: rgba(226, 184, 83, 0.03);
+        transform: translateY(-8px);
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(5, 5, 5, 0) 0%,
+          rgba(5, 5, 5, 1) 90%
+        );
+      }
+
+      .btn-primary {
+        background: #e2b853;
+        color: #050505;
+        padding: 0.75rem 2.5rem;
+        font-family: "Bebas Neue";
+        font-size: 1.25rem;
+        transition: all 0.3s ease;
+        letter-spacing: 0.1em;
+        display: inline-block;
+      }
+
+      .btn-primary:hover {
+        background: #fff;
+        box-shadow: 0 0 30px rgba(226, 184, 83, 0.6);
+        transform: scale(1.05);
+      }
+
+      .timeline-dot {
+        width: 12px;
+        height: 12px;
+        background: #e2b853;
+        border-radius: 50%;
+        box-shadow: 0 0 15px #e2b853;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e2b853;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <nav
+      class="absolute top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-gradient-to-b from-black/90 to-transparent backdrop-blur-sm"
+    >
+      <div class="text-2xl font-display tracking-widest text-white">
+        LUMINARCH <span class="text-brand-gold">STUDIO</span>
+      </div>
+      <div
+        class="hidden md:flex space-x-10 text-xs font-medium uppercase tracking-[0.2em]"
+      >
+        <a href="#games" class="hover:text-brand-gold transition">Games</a>
+        <a href="#studio" class="hover:text-brand-gold transition">Studio</a>
+        <a href="#journey" class="hover:text-brand-gold transition">Journey</a>
+        <a href="#careers" class="hover:text-brand-gold transition">Careers</a>
+      </div>
+      <div>
+        <button
+          class="border border-brand-gold/40 px-6 py-2 text-[10px] uppercase tracking-widest hover:bg-brand-gold hover:text-black transition"
+        >
+          Support
+        </button>
+      </div>
+    </nav>
+
+    <section id="apply" class="py-32 px-8 lg:px-20 bg-[#050505]">
+      <div class="container mx-auto max-w-4xl">
+        <div class="text-center mb-16">
+          <h2
+            class="text-brand-gold text-xl tracking-[0.3em] mb-4 font-display"
+          >
+            THE APPLICATION
+          </h2>
+          <h3 class="text-6xl md:text-7xl uppercase">
+            Submit Your <span class="text-brand-gold">Credentials</span>
+          </h3>
+          <p class="text-gray-400 mt-4 font-light italic">
+            "Great worlds are built by those who dare to step into the unknown."
+          </p>
+        </div>
+
+        <div
+          class="glass-panel p-8 md:p-12 rounded-sm shadow-premium border-white/10"
+        >
+          <form action="#" method="POST" class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="md:col-span-2">
+                <label
+                  class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  placeholder="E.G. ARJUN SHARMA"
+                  required
+                  class="w-full bg-white/5 border border-white/10 px-4 py-4 focus:border-brand-gold/50 outline-none transition text-white placeholder:text-white/20"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
+                  >Age</label
+                >
+                <input
+                  type="number"
+                  placeholder="24"
+                  required
+                  class="w-full bg-white/5 border border-white/10 px-4 py-4 focus:border-brand-gold/50 outline-none transition text-white placeholder:text-white/20"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <label
+                  class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  placeholder="abc@example.com"
+                  required
+                  class="w-full bg-white/5 border border-white/10 px-4 py-4 focus:border-brand-gold/50 outline-none transition text-white placeholder:text-white/20"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  placeholder="+91 XXXXX XXXXX"
+                  required
+                  class="w-full bg-white/5 border border-white/10 px-4 py-4 focus:border-brand-gold/50 outline-none transition text-white placeholder:text-white/20"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
+                >Select Your Path (Role)</label
+              >
+              <div class="relative">
+                <select
+                  id="role-select"
+                  title="Select Role"
+                  required
+                  class="w-full bg-white/5 border border-white/10 px-4 py-4 focus:border-brand-gold/50 outline-none transition text-white appearance-none cursor-pointer"
+                >
+                  <option value="" disabled selected class="bg-black">
+                    CHOOSE A SPECIALIZATION
+                  </option>
+                  <option value="dev" class="bg-black">
+                    Game Developers (Unity/Unreal)
+                  </option>
+                  <option value="3d" class="bg-black">
+                    3D Artists (Env/Props)
+                  </option>
+                  <option value="animator" class="bg-black">
+                    Animators (Gameplay)
+                  </option>
+                  <option value="level" class="bg-black">
+                    Level Designers
+                  </option>
+                  <option value="ui" class="bg-black">UI/UX Designers</option>
+                  <option value="music" class="bg-black">
+                    Sound & Music Designers
+                  </option>
+                  <option value="marketing" class="bg-black">
+                    Marketing & Community
+                  </option>
+                  <option value="concept" class="bg-black">
+                    Concept Artists
+                  </option>
+                </select>
+                <div
+                  class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-brand-gold"
+                >
+                  ↓
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label
+                class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
+                >Resume / Portfolio (PDF)</label
+              >
+              <div class="relative group">
+                <input
+                  title="Resume"
+                  type="file"
+                  required
+                  class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                />
+                <div
+                  class="border-2 border-dashed border-white/10 group-hover:border-brand-gold/40 transition-colors p-10 flex flex-col items-center justify-center bg-white/5 rounded-sm"
+                >
+                  <span
+                    class="text-3xl mb-4 group-hover:scale-110 transition-transform"
+                    >📄</span
+                  >
+                  <p
+                    class="text-xs tracking-widest text-gray-400 uppercase group-hover:text-white transition"
+                  >
+                    Drag and drop or
+                    <span class="text-brand-gold">Browse Files</span>
+                  </p>
+                  <p class="text-[10px] text-gray-600 mt-2">
+                    MAX FILE SIZE: 10MB
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <button
+                type="submit"
+                class="btn-primary w-full md:w-auto text-center"
+              >
+                INITIATE APPLICATION
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 px-8">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center opacity-60"
+      >
+        <div class="font-display text-xl tracking-tighter mb-8 md:mb-0">
+          LUMINARCH <span class="text-brand-gold">STUDIO</span>
+        </div>
+        <div class="flex space-x-8 text-[10px] uppercase tracking-[0.3em]">
+          <a href="#" class="hover:text-brand-gold transition">Privacy</a>
+          <a href="#" class="hover:text-brand-gold transition">Legal</a>
+          <a
+            href="mailto:info@luminarch-studio.com"
+            class="hover:text-brand-gold transition"
+            >Contact</a
+          >
+        </div>
+        <div class="mt-8 md:mt-0 text-[10px] uppercase tracking-widest">
+          &copy; 2026 Luminarch Studio. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        // 1. Get the 'role' from the URL (e.g., ?role=dev)
+        const urlParams = new URLSearchParams(window.location.search);
+        const roleFromUrl = urlParams.get("role");
+
+        // 2. Find the dropdown menu
+        const selectElement = document.getElementById("role-select");
+
+        // 3. If a role exists in the URL, set it as the selected value
+        if (roleFromUrl && selectElement) {
+          selectElement.value = roleFromUrl;
+        }
+      });
+    </script>
+  </body>
+</html>
