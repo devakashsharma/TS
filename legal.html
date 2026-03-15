@@ -115,6 +115,18 @@
         background: #e2b853;
         border-radius: 10px;
       }
+      .legal-text p {
+        margin-bottom: 1.5rem;
+        color: #a1a1aa; /* brand-muted */
+        line-height: 1.8;
+        font-weight: 300;
+      }
+      .legal-text h4 {
+        color: #e2b853; /* brand-gold */
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
     </style>
   </head>
   <body class="antialiased">
@@ -133,175 +145,185 @@
         <a href="#careers" class="hover:text-brand-gold transition">Careers</a>
       </div>
       <div>
-        <button
+        <a
+          href="mailto:info@luminarch-studio.com"
           class="border border-brand-gold/40 px-6 py-2 text-[10px] uppercase tracking-widest hover:bg-brand-gold hover:text-black transition"
         >
           Support
-        </button>
+        </a>
       </div>
     </nav>
 
-    <section id="apply" class="py-32 px-8 lg:px-20 bg-[#050505]">
+    <section id="privacy" class="py-32 px-8 lg:px-20 bg-black">
       <div class="container mx-auto max-w-4xl">
-        <div class="text-center mb-16">
+        <div class="mb-16">
           <h2
             class="text-brand-gold text-xl tracking-[0.3em] mb-4 font-display"
           >
-            THE APPLICATION
+            LEGAL FRAMEWORK
           </h2>
           <h3 class="text-6xl md:text-7xl uppercase">
-            Submit Your <span class="text-brand-gold">Credentials</span>
+            Privacy <span class="text-brand-gold">Policy</span>
           </h3>
-          <p class="text-gray-400 mt-4 font-light italic">
-            "Great worlds are built by those who dare to step into the unknown."
+          <p class="text-gray-500 mt-4 text-sm tracking-widest uppercase">
+            Last Updated: March 2026
           </p>
         </div>
 
-        <div
-          class="glass-panel p-8 md:p-12 rounded-sm shadow-premium border-white/10"
-        >
-          <form action="#" method="POST" class="space-y-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div class="md:col-span-2">
-                <label
-                  class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
-                  >Full Name</label
-                >
-                <input
-                  type="text"
-                  placeholder="E.G. ARJUN SHARMA"
-                  required
-                  class="w-full bg-white/5 border border-white/10 px-4 py-4 focus:border-brand-gold/50 outline-none transition text-white placeholder:text-white/20"
-                />
-              </div>
-              <div>
-                <label
-                  class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
-                  >Age</label
-                >
-                <input
-                  type="number"
-                  placeholder="24"
-                  required
-                  class="w-full bg-white/5 border border-white/10 px-4 py-4 focus:border-brand-gold/50 outline-none transition text-white placeholder:text-white/20"
-                />
-              </div>
-            </div>
+        <div class="glass-panel p-10 md:p-16 rounded-sm legal-text">
+          <p
+            class="italic text-white/80 border-l-2 border-brand-gold pl-6 mb-12"
+          >
+            Luminarch Studio ("we", "our", "us") respects your privacy and is
+            committed to protecting any information you share with us through
+            our website.
+          </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <label
-                  class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
-                  >Email Address</label
-                >
-                <input
-                  type="email"
-                  placeholder="abc@example.com"
-                  required
-                  class="w-full bg-white/5 border border-white/10 px-4 py-4 focus:border-brand-gold/50 outline-none transition text-white placeholder:text-white/20"
-                />
-              </div>
-              <div>
-                <label
-                  class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
-                  >Phone Number</label
-                >
-                <input
-                  type="tel"
-                  placeholder="+91 XXXXX XXXXX"
-                  required
-                  class="w-full bg-white/5 border border-white/10 px-4 py-4 focus:border-brand-gold/50 outline-none transition text-white placeholder:text-white/20"
-                />
-              </div>
-            </div>
+          <h4>1. INFORMATION WE COLLECT</h4>
+          <p>
+            When you interact with our website, we may collect limited
+            information such as:
+          </p>
+          <ul
+            class="list-disc list-inside text-gray-400 space-y-2 mb-6 ml-4 text-sm uppercase tracking-wide"
+          >
+            <li>Your name or email if you contact us</li>
+            <li>Portfolio or resume if you apply for roles</li>
+            <li>
+              Basic technical information such as browser type, device type, and
+              IP address for analytics purposes
+            </li>
+          </ul>
 
-            <div>
-              <label
-                class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
-                >Select Your Path (Role)</label
-              >
-              <div class="relative">
-                <select
-                  id="role-select"
-                  title="Select Role"
-                  required
-                  class="w-full bg-white/5 border border-white/10 px-4 py-4 focus:border-brand-gold/50 outline-none transition text-white appearance-none cursor-pointer"
-                >
-                  <option value="" disabled selected class="bg-black">
-                    CHOOSE A SPECIALIZATION
-                  </option>
-                  <option value="dev" class="bg-black">
-                    Game Developers (Unity/Unreal)
-                  </option>
-                  <option value="3d" class="bg-black">
-                    3D Artists (Env/Props)
-                  </option>
-                  <option value="animator" class="bg-black">
-                    Animators (Gameplay)
-                  </option>
-                  <option value="level" class="bg-black">
-                    Level Designers
-                  </option>
-                  <option value="ui" class="bg-black">UI/UX Designers</option>
-                  <option value="music" class="bg-black">
-                    Sound & Music Designers
-                  </option>
-                  <option value="marketing" class="bg-black">
-                    Marketing & Community
-                  </option>
-                  <option value="concept" class="bg-black">
-                    Concept Artists
-                  </option>
-                </select>
-                <div
-                  class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-brand-gold"
-                >
-                  ↓
-                </div>
-              </div>
-            </div>
+          <h4>2. HOW WE USE INFORMATION</h4>
+          <p>
+            The information collected may be used for responding to inquiries,
+            reviewing applications, improving website performance, and
+            communicating studio updates.
+          </p>
 
-            <div>
-              <label
-                class="block text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-3"
-                >Resume / Portfolio (PDF)</label
-              >
-              <div class="relative group">
-                <input
-                  title="Resume"
-                  type="file"
-                  required
-                  class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-                />
-                <div
-                  class="border-2 border-dashed border-white/10 group-hover:border-brand-gold/40 transition-colors p-10 flex flex-col items-center justify-center bg-white/5 rounded-sm"
-                >
-                  <span
-                    class="text-3xl mb-4 group-hover:scale-110 transition-transform"
-                    >📄</span
-                  >
-                  <p
-                    class="text-xs tracking-widest text-gray-400 uppercase group-hover:text-white transition"
-                  >
-                    Drag and drop or
-                    <span class="text-brand-gold">Browse Files</span>
-                  </p>
-                  <p class="text-[10px] text-gray-600 mt-2">
-                    MAX FILE SIZE: 10MB
-                  </p>
-                </div>
-              </div>
-            </div>
+          <h4>3. DATA PROTECTION</h4>
+          <p>
+            We take reasonable steps to protect your information from
+            unauthorized access, misuse, or disclosure through encrypted
+            pipelines and secure hosting protocols.
+          </p>
 
-            <div class="pt-4">
-              <button
-                type="submit"
-                class="btn-primary w-full md:w-auto text-center"
-              >
-                INITIATE APPLICATION
-              </button>
-            </div>
-          </form>
+          <h4>4. THIRD-PARTY SERVICES</h4>
+          <p>
+            Our website may use third-party services such as hosting providers
+            or analytics tools. These services may collect anonymous usage data
+            to help us understand website traffic.
+          </p>
+
+          <h4>5. EXTERNAL LINKS</h4>
+          <p>
+            Our website may contain links to external platforms such as
+            portfolio submissions or social media. We are not responsible for
+            the privacy practices of those websites.
+          </p>
+
+          <h4>6. CHILDREN'S PRIVACY</h4>
+          <p>
+            This website is not intended for children under the age of 13 and we
+            do not knowingly collect personal information from minors.
+          </p>
+
+          <h4>7. CHANGES TO THIS POLICY</h4>
+          <p>
+            We may update this Privacy Policy from time to time. Any updates
+            will be posted on this page with an updated revision date.
+          </p>
+
+          <h4>8. CONTACT</h4>
+          <p>
+            If you have any questions regarding this Privacy Policy, you may
+            contact us through the official studio contact section.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="terms"
+      class="py-32 px-8 lg:px-20 bg-[#080808] border-t border-white/5"
+    >
+      <div class="container mx-auto max-w-4xl">
+        <div class="mb-16 text-right">
+          <h2
+            class="text-brand-gold text-xl tracking-[0.3em] mb-4 font-display"
+          >
+            CODE OF CONDUCT
+          </h2>
+          <h3 class="text-6xl md:text-7xl uppercase">
+            Terms of <span class="text-brand-gold">Use</span>
+          </h3>
+          <p class="text-gray-500 mt-4 text-sm tracking-widest uppercase">
+            Last Updated: March 2026
+          </p>
+        </div>
+
+        <div class="glass-panel p-10 md:p-16 rounded-sm legal-text">
+          <p
+            class="italic text-white/80 border-r-2 border-brand-gold pr-6 mb-12 text-right"
+          >
+            Welcome to the official website of Luminarch Studio. By accessing or
+            using this website, you agree to the following terms.
+          </p>
+
+          <h4>1. INTELLECTUAL PROPERTY</h4>
+          <p>
+            All content on this website including text, graphics, game concepts,
+            logos, artwork, and design elements are the intellectual property of
+            Luminarch Studio unless stated otherwise. No content may be copied,
+            reproduced, or used commercially without written permission.
+          </p>
+
+          <h4>2. WEBSITE CONTENT</h4>
+          <p>
+            The information provided is for general informational purposes. We
+            reserve the right to modify or remove content at any time without
+            prior notice.
+          </p>
+
+          <h4>3. PROJECT INFORMATION</h4>
+          <p>
+            Game concepts, visuals, and project descriptions (e.g., "ARUN: The
+            Caused Veil") represent works in development and may undergo
+            significant changes during production.
+          </p>
+
+          <h4>4. SUBMISSIONS AND APPLICATIONS</h4>
+          <p>
+            By submitting a portfolio or resume, you confirm that the content
+            belongs to you and does not violate any third-party rights or
+            non-disclosure agreements.
+          </p>
+
+          <h4>5. LIMITATION OF LIABILITY</h4>
+          <p>
+            Luminarch Studio will not be liable for any direct or indirect
+            damages arising from the use or inability to use this website.
+          </p>
+
+          <h4>6. EXTERNAL LINKS</h4>
+          <p>
+            We are not responsible for the content or policies of third-party
+            websites linked within our domain.
+          </p>
+
+          <h4>7. GOVERNING LAW</h4>
+          <p>
+            These terms shall be governed in accordance with the laws of India.
+            Any disputes shall be subject to the exclusive jurisdiction of the
+            courts in Maharashtra.
+          </p>
+
+          <h4>8. CONTACT</h4>
+          <p>
+            For any legal inquiries, please contact us through the official
+            contact section on this website.
+          </p>
         </div>
       </div>
     </section>
@@ -379,21 +401,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        // 1. Get the 'role' from the URL (e.g., ?role=dev)
-        const urlParams = new URLSearchParams(window.location.search);
-        const roleFromUrl = urlParams.get("role");
-
-        // 2. Find the dropdown menu
-        const selectElement = document.getElementById("role-select");
-
-        // 3. If a role exists in the URL, set it as the selected value
-        if (roleFromUrl && selectElement) {
-          selectElement.value = roleFromUrl;
-        }
-      });
-    </script>
   </body>
 </html>
